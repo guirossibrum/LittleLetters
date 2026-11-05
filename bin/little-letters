@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+mode="${1:---app}"
+if (( $# > 1 )); then
+  printf 'Usage: little-letters [--app|--browser|--url]\n' >&2
+  exit 2
+fi
+case "$mode" in
+  --app|--browser|--url) ;;
+  --help|-h)
+    printf 'Usage: little-letters [--app|--browser|--url]\n\nOpen Little Letters in an Omarchy app window (default), a browser tab, or print its file URL.\n'
+    exit 0
+    ;;
+  *) printf 'Unknown option: %s\n' "$mode" >&2; exit 2 ;;
+esac
+
+app_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd -P)"
+if [[ ! -f "$app_root/index.html" || ! -f "$app_root/native_pdf.py" ]]; then
+  printf 'Little Letters: app files are missing from %s\n' "$app_root" >&2
+  exit 1
+fi
+
+# Omarchy's system Python exposes Cairo, Pango, and librsvg without a venv.
+exec /usr/bin/python3 -B "$app_root/native_pdf.py" "$mode"

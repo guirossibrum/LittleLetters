@@ -1,0 +1,62 @@
+[
+  {
+    "file": "Italianno-Regular.ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/italianno/Italianno-Regular.ttf",
+    "sha256": "f6ae96dea0da46c73370eb0575848ab0eda190315bdfda3f5b252bba3dc9173c"
+  },
+  {
+    "file": "Italianno-OFL.txt",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/italianno/OFL.txt",
+    "sha256": "bce79721f0203586872bbd7016922baf449980bdd1c44550a821112a3b547185"
+  },
+  {
+    "file": "Sacramento-Regular.ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/sacramento/Sacramento-Regular.ttf",
+    "sha256": "9341fda10adbfeb7efc94302b34507a3e227d7e7f5c432df3f5ac8753ff73d24"
+  },
+  {
+    "file": "Sacramento-OFL.txt",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/sacramento/OFL.txt",
+    "sha256": "2e2cb5a98da665f2ab82a9fd01fb18c2337f845761b0c163f690ed65f3b94677"
+  },
+  {
+    "file": "Parisienne-Regular.ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/parisienne/Parisienne-Regular.ttf",
+    "sha256": "bc9ee17f022e20bc700797e5f557d14bfa43af0c98d9e6c9c5c1ca4ec7aacd57"
+  },
+  {
+    "file": "Parisienne-OFL.txt",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/parisienne/OFL.txt",
+    "sha256": "1dd84b611f4bed7f9ff9089e76a96337b187e6f283a4ab33bcb987f844f2c4db"
+  },
+  {
+    "file": "GreatVibes-Regular.ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/greatvibes/GreatVibes-Regular.ttf",
+    "sha256": "8d509802186f1b51572531ecf313e8098f9a5bfdfaca93f0c9b34467f9982d15"
+  },
+  {
+    "file": "GreatVibes-OFL.txt",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/greatvibes/OFL.txt",
+    "sha256": "61093a21f5e63dedf54222b3c09997e54c0fe43e3851d21386e02ddcbc246d49"
+  },
+  {
+    "file": "PinyonScript-Regular.ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/pinyonscript/PinyonScript-Regular.ttf",
+    "sha256": "4aab130a6ed27f8b8117738c84a5602edf9300cdcc0651a9a65bf96f451ac29a"
+  },
+  {
+    "file": "PinyonScript-OFL.txt",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/pinyonscript/OFL.txt",
+    "sha256": "61d07cb0eaa943943648df2b11d0c2210e772053c192871e13f680b53fe0b77e"
+  },
+  {
+    "file": "DancingScript-OFL.txt",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/dancingscript/OFL.txt",
+    "sha256": "6f090277c00af96651ce6dbcc38ff1591047a3bffef486e80b6a32e8276a8201"
+  },
+  {
+    "file": "DancingScript-Regular.ttf",
+    "url": "https://raw.githubusercontent.com/googlefonts/DancingScript/291f87c05206179b6bfd53735a5638b5cc84e3b3/fonts/ttf/DancingScript-Regular.ttf",
+    "sha256": "48ceb5145740383b3d21dbce5f3010bc456829d46ad92fc0df5fd7ce36c62371"
+  }
+]

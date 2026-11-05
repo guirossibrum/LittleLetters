@@ -1,0 +1,30 @@
+# Workspace and account configuration
+.agents/
+.aws/
+.codex/
+.env
+.env.*
+
+# Local tooling and generated verification artifacts
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+test-results/
+playwright-report/
+*.log
+core
+core.*
+
+# Personal worksheet exports and records
+private/
+exports/
+worksheets/
+reports/
+screenshots/
+*.pdf
+*.sqlite
+*.sqlite3
+*.db
+*.csv

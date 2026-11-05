@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "grbrum.littleletters",
+  "name": "Little Letters",
+  "version": "1.1.0",
+  "author": "guirossibrum",
+  "license": "MIT",
+  "description": "Printable handwriting practice for kids, with block letters, seven calligraphy fonts, dotted tracing, and PDF worksheets.",
+  "kinds": ["bar-widget"],
+  "entryPoints": { "barWidget": "BarWidget.qml" },
+  "barWidget": {
+    "displayName": "Little Letters",
+    "description": "Open the offline handwriting worksheet maker in its own app window.",
+    "category": "Education",
+    "aliases": ["littleletters", "calligraphy", "handwriting", "letters", "tracing"],
+    "defaultSection": "right",
+    "allowMultiple": false
+  }
+}

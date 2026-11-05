@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf8f4">
+  <title>Little Letters · Practice sheet maker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="glyphs.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="./index.html" aria-label="Little Letters home"><span class="brand-mark" aria-hidden="true">✎</span><span>little letters<span class="brand-dot">.</span></span></a>
+    <span class="header-note">Small steps. Beautiful letters.</span>
+    <button type="button" class="button primary" id="print"><span aria-hidden="true">↗</span> Print / save PDF</button>
+  </header>
+  <main>
+    <div class="intro"><div><p class="eyebrow">A LITTLE PRACTICE, EVERY DAY</p><h1>Let’s make some lovely letters.</h1><p>Make a practice sheet that’s just right for your little writer.</p></div><span class="intro-doodle" aria-hidden="true">Aa<span>start here ↙</span></span></div>
+    <div class="workspace">
+      <form id="settings" class="settings" autocomplete="off">
+        <section class="setting-section"><h2><span class="step">1</span> Pick your lettering</h2>
+          <div class="style-options">
+            <label class="style-card"><input type="radio" name="style" value="block" checked><span class="style-sample block-sample">Aa</span><strong>Block letters</strong><small>Clear & simple</small></label>
+            <label class="style-card"><input type="radio" name="style" value="script"><span class="style-sample script-sample">Aa</span><strong>Calligraphy</strong><small>Loops & flow</small></label>
+          </div>
+          <div id="script-font-field" hidden><label for="script-font">Calligraphy font</label><select id="script-font" name="scriptFont"><option value="allura">Allura</option><option value="italianno">Italianno</option><option value="sacramento">Sacramento</option><option value="parisienne">Parisienne</option><option value="dancing">Dancing Script</option><option value="greatvibes">Great Vibes</option><option value="pinyon">Pinyon Script</option></select></div>
+          <p class="field-note" id="style-note">Single-line letters with dots to follow.</p>
+        </section>
+        <section class="setting-section"><h2><span class="step">2</span> Choose what to practice</h2>
+          <label for="exercise">Exercise</label><select id="exercise" name="exercise"><option value="letters">Letters</option><option value="name">My name</option><option value="words">Words & phrases</option><option value="numbers">Numbers</option><option value="strokes">Pen warm-ups</option><option value="blank">Blank writing lines</option></select>
+          <div id="content-fields"><label for="content" id="content-label">Letters to practice</label><textarea id="content" name="content" rows="3" maxlength="2000" spellcheck="false">A a
+B b</textarea><p class="field-note" id="content-note">One letter, pair, or phrase per line.</p>
+            <div class="quick-actions" id="quick-actions"><button type="button" data-preset="lower">a–z</button><button type="button" data-preset="upper">A–Z</button><button type="button" data-preset="pairs">Aa–Zz</button><button type="button" data-preset="first">A–F</button></div>
+          </div>
+          <label for="student">Writer’s name <span class="optional">optional</span></label><input id="student" name="student" maxlength="60" placeholder="Add a name to the sheet">
+        </section>
+        <section class="setting-section"><h2><span class="step">3</span> Make it their own</h2>
+          <div class="field-heading"><label for="size">Letter height</label><output for="size" id="size-output">8 mm</output></div><input id="size" name="size" type="range" min="5" max="16" value="8" step="1"><div class="range-labels"><span>Smaller</span><span>Bigger</span></div>
+          <div class="field-grid"><div><label for="trace">Dotted lines</label><select id="trace" name="trace"><option value="1">1 line</option><option value="2" selected>2 lines</option><option value="3">3 lines</option><option value="4">4 lines</option></select></div><div><label for="blank">Minimum blank lines</label><select id="blank" name="blank"><option value="1">1 line</option><option value="2" selected>2 lines</option><option value="3">3 lines</option><option value="4">4 lines</option></select></div></div>
+          <p class="field-note">Extra writing lines fill the rest of the page.</p>
+          <div class="field-grid"><div><label for="paper">Paper size</label><select id="paper" name="paper"><option value="letter">US Letter</option><option value="a4">A4</option></select></div><div><label for="guide-color">Guideline color</label><select id="guide-color" name="guideColor"><option value="blue">Soft blue</option><option value="gray">Pencil gray</option></select></div></div>
+          <label class="toggle-label"><input id="repeat" name="repeat" type="checkbox" checked><span>Repeat across the line</span></label>
+          <label class="toggle-label"><input id="guides" name="guides" type="checkbox" checked><span>Show writing guidelines</span></label>
+          <div id="slant-field" hidden><label for="slant">Calligraphy guide angle</label><select id="slant" name="slant"><option value="0">No slant guides</option><option value="55" selected>55°</option><option value="65">65°</option><option value="75">75°</option></select></div>
+        </section>
+        <button type="button" id="reset" class="reset-button">↺ Reset to a fresh start</button>
+      </form>
+      <section class="preview" aria-label="Practice sheet preview">
+        <div class="preview-toolbar"><div><span class="live-dot"></span><strong>Your practice sheet</strong><span class="paper-label" id="paper-label">US Letter</span></div><button id="open-pdf" class="button secondary" type="button" title="Open the complete worksheet as a PDF in a new tab">↗ Open PDF</button></div>
+        <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+        <div class="paper-stage"><div id="sheet" class="sheet"></div></div>
+        <div class="preview-bottom"><p><span aria-hidden="true">✦</span> Trace the dots. Try it yourself. Make it yours.</p><nav class="pagination" aria-label="Preview pages"><button type="button" id="previous" aria-label="Previous page">←</button><span id="page-count" aria-live="polite">Page 1 of 1</span><button type="button" id="next" aria-label="Next page">→</button></nav></div>
+        <aside class="practice-tip"><span aria-hidden="true">☀</span><div><strong>A little encouragement goes a long way.</strong><p>Keep practice short and relaxed. Celebrate effort, take breaks, and let every wobbly letter be part of learning.</p></div></aside>
+      </section>
+    </div>
+    <footer class="app-footer">Made for little hands and big possibilities. <span>Works offline · Nothing is uploaded</span></footer>
+  </main>
+  <div id="print-sheets" aria-hidden="true"></div>
+</body>
+</html>
